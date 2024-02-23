@@ -1,0 +1,18 @@
+{
+    "site": {
+      "title": "Monotributo",
+      "base_url": "https://hcsoluciones.com.ar",
+      "base_path": "/",
+      "trailing_slash": false,
+      "favicon": "/favicon.svg",
+      "logo": "/letter-m.png",
+      "logo_width": "147",
+      "logo_height": "31",
+      "logo_text": "Monotributo"
+    },
+    "metadata": {
+        "meta_author": "HC Soluciones",
+        "meta_image": "/images/og-image.png",
+        "meta_description": "monotributo"
+      }
+    }

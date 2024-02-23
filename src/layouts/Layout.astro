@@ -1,5 +1,6 @@
 ---
 import Header from '../components/pages/Header.astro';
+import Footer from '../components/pages/Footer.astro'; 
 import '@fontsource-variable/encode-sans';
 import { ViewTransitions } from 'astro:transitions';
 
@@ -18,14 +19,41 @@ const { title, description } = Astro.props;
 		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@monotributo.net" />
+        <meta name="twitter:creator" content="@monotributo.net" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content="/logo.jpg" />
+    
+        <meta name="og:image" content="/logo.jpg" />
+        <meta name="og:title" content={title} />
+        <meta name="og:description" content={description} />
+        <meta name="og:url" content="https://monotributo.net" />
+        <meta name="og:site_name" content="monotributo.net" />
+        <meta name="og:type" content="website" />
+        <meta name="og:locale" content="es_AR" />
+    
+        <meta name="robots" content="index, follow" />
+        <meta name="googlebot" content="index, follow" />
+
 	 
 		<title>{title}</title>
         <ViewTransitions />
 	</head>
    
-	<body>
+    <body class="relative text-black   px-4">
+
+        <div class="absolute inset-0 -z-10  bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_500px_at_90%_200px,#79b2f8,transparent)]"></div>
+
+ 
         <Header />
-		<slot />
+        <main id="main-content" class="container mx-auto mt-50">
+          <slot />
+        </main>
+        <Footer />
 	</body>
 </html>
 <style is:global>

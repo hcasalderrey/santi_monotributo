@@ -1,0 +1,44 @@
+{
+  "main": [
+    {
+      "name": "Incio",
+      "url": "/"
+    },
+    {
+      "name": "Monotributo",
+      "url": "/monotributo"
+    },
+    {
+      "name": "Responsables Inscripto",
+      "url": "/responsablesinscriptos"
+    },
+    {
+      "name": "Formulario Ceta",
+      "url": "/Ceta"
+    },
+    {
+      "name": "Contacto",
+      "url": "/contacto"
+    } 
+     
+  ],
+
+  "footer": [
+    {
+        "name": "Monotributo",
+        "url": "/monotributo"
+      },
+      {
+        "name": "Responsables Inscripto",
+        "url": "/responsablesinscriptos"
+      },
+      {
+        "name": "Formulario Ceta",
+        "url": "/Ceta"
+      },
+      {
+        "name": "Contacto",
+        "url": "/contacto"
+      } 
+  ]
+}
