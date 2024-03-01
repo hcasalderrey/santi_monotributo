@@ -3,27 +3,27 @@ import CardItems from "./CardItems.astro"
 ---
 <div class="mt-10">
     <h2 class="text-2xl font-bold ">Servicios disponibles: </h2>
-    <div class="flex flex-wrap justify-center  gap-8 ">
-        <CardItems title="Monotributo" description="Realizá el alta y empezá a facturar"> 
+    <div class="flex flex-wrap md:justify-between justify-center gap-8 mt-4">
+        <CardItems title="Monotributo" description="Realizá el alta y empezá a facturar" link="./monotributo"> 
             slot
         </CardItems>
 
-        <CardItems title="Responsables Inscriptos" description="">
+        <CardItems title="Responsables Inscriptos" description="Breve descripción" link="./responsablesinscriptos">
             slot
         </CardItems>
 
-        <CardItems title="Certificados CETA" description="Magna non enim nulla deserunt incididunt."> 
+        <CardItems title="Certificados CETA" description="Breve descripción" link="/ceta"> 
             slot
         </CardItems>
 
-        <CardItems title="Certificaciones Origen de Fondos" description="Magna non enim nulla deserunt incididunt."> 
+        <CardItems title="Certificaciones Origen de Fondos" description="Breve descripción" link="/origenfondos"> 
             slot
         </CardItems>
 
-        <CardItems title="Bonos mensuales" description="Magna non enim nulla deserunt incididunt."> 
+        <CardItems title="Bonos mensuales" description="Breve descripción" link="/contacto"> 
             slot
         </CardItems>
-        <CardItems title="Otros Trámites o consultas" description="Magna non enim nulla deserunt incididunt.">
+        <CardItems title="Otros Trámites o consultas" description="Breve descripción" link="/contacto">
             slot    </CardItems>
 
 
