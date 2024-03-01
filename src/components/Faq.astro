@@ -1,191 +1,119 @@
+---
+import Verify from "./icons/verify.astro"
+---
+
 <div class="max-w-full mx-auto mt-20 mb-20">
 
 <h2 class="text-2xl font-bold">Algunas preguntas frecuentes: </h2>
 
-<ul
-  class="max-w-full mx-auto mt-4 divide-y shadow shadow-gray-600 rounded-xl "
->
-  <li>
-    <details class="group">
-      <summary
-        class="flex items-center gap-3 px-4 py-3 font-medium marker:content-none hover:cursor-pointer"
-      >
-        <svg
-          class="w-5 h-5 text-gray-500 transition group-open:rotate-90"
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          fill="currentColor"
-          viewBox="0 0 16 16"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
-          >
-          </path>
-        </svg>
-        <span class="font-semibold"
-          >Franco: Hola, quería saber si con el trámite de Alta en el
-          monotributo ya puedo empezar a facturar? Gracias</span
-        >
-      </summary>
 
-      <article class="px-4 pb-4">
-        <p >
-          Hola Franco! Cómo estás? Sí, una vez que te enviamos la confirmación
-          del trámite de alta en el monotributo, ya te encontrás habilitado para
-          facturar. Podés solicitarnos la guía con el paso a paso para facturar.
-          Saludos!
-        </p>
-      </article>
-    </details>
-  </li>
-  <li>
-    <details class="group">
-      <summary
-        class="flex items-center gap-3 px-4 py-3 font-medium marker:content-none hover:cursor-pointer"
-      >
-        <svg
-          class="w-5 h-5 text-gray-500 transition group-open:rotate-90"
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          fill="currentColor"
-          viewBox="0 0 16 16"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
-          >
-          </path>
-        </svg>
-        <span class="font-semibold"
-          >Hernán: Buenas! Quería saber si cuentan con alguna explicación del
-          Monotributo. Gracias</span
-        >
-      </summary>
+<div class="max-w-full mx-auto mt-4 divide-y  bg-[#e5ddd5] rounded-xl p-10">
+    <div class="ml-auto rounded-lg rounded-tl-none my-2 p-2 text-sm bg-white flex flex-col relative speech-bubble-left">
+        <p >Franco: Hola, quería saber si con el trámite de Alta en el
+            monotributo ya puedo empezar a facturar? Gracias</p>
+        <p class="text-gray-600 text-xs text-right leading-none">08:03</p>
+    </div>
 
-      <article class="px-4 pb-4">
-        <p>
-          Hola Hernán! Cómo está? Por supuesto que sí. Una vez que terminamos
-          con tu trámite de alta en el monotributo vas a recibir información
-          detallada de los impuestos que te corresponden. Si desean un
-          asesoramiento más completo, ya tienen nuestro contacto para
-          escribirnos!
-        </p>
-      </article>
-    </details>
-  </li>
-  <li>
-    <details class="group">
-      <summary
-        class="flex items-center gap-3 px-4 py-3 font-medium marker:content-none hover:cursor-pointer"
-      >
-        <svg
-          class="w-5 h-5 text-gray-500 transition group-open:rotate-90"
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          fill="currentColor"
-          viewBox="0 0 16 16"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
-          >
-          </path>
-        </svg>
-        <span class="font-semibold"
-          >Lucía: Buenos días, quisiera saber si brindan algún asesoramiento
-          mensual. Gracias</span
-        >
-      </summary>
+    <div class="mr-auto rounded-lg rounded-tr-none my-2 p-2 text-sm  bg-green-300/60 flex flex-col relative speech-bubble-right">
+        
+        <p class="text-right">Hola Franco! Cómo estás? Sí, una vez que te enviamos la confirmación
+            del trámite de alta en el monotributo, ya te encontrás habilitado para
+            facturar. Podés solicitarnos la guía con el paso a paso para facturar.
+            Saludos!</p>
+        <Verify  hora="08:07"/> 
+    </div>
 
-      <article class="px-4 pb-4">
-        <p>
-          Hola Lucía! Cómo estás? Sí, contamos con un equipo de contadores
-          capacitados para brindarte un seguimiento mensual de tu monotributo.
-          Solamente deberías seleccionar la opción de “Bono Mensual” en nuestra
-          página web, para poder contactarte a la brevedad. No dudes en
-          escribirnos. Saludos!
-        </p>
-      </article>
-    </details>
-  </li>
-  <li>
-    <details class="group">
-      <summary
-        class="flex items-center gap-3 px-4 py-3 font-medium marker:content-none hover:cursor-pointer"
-      >
-        <svg
-          class="w-5 h-5 text-gray-500 transition group-open:rotate-90"
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          fill="currentColor"
-          viewBox="0 0 16 16"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
-          >
-          </path>
-        </svg>
-        <span class="font-semibold"
-          >Mario: Hola, estoy necesitando facturar pero el sistema de AFIP no me
-          deja. Estoy activo en el monotributo pero no encuentro dónde facturar.</span
-        >
-      </summary>
+    <div class="ml-auto rounded-lg rounded-tl-none my-2 p-2 text-sm bg-white flex flex-col relative speech-bubble-left">
+        <p >Hernán: Buenas! Quería saber si cuentan con alguna explicación del
+            Monotributo. Gracias</p>
+        <p class="text-gray-600 text-xs text-right leading-none">12:00</p>
+    </div>
 
-      <article class="px-4 pb-4">
-        <p>
-          Hola Mario! Cómo estás? Podemos enviarte un video “tutorial” para
-          saber cómo facturar o brindarte un asesoramiento vía llamada.
-          Solamente deberías seleccionar la opción de “Consultas” en nuestra
-          página web, para poder contactarte a la brevedad. Saludos!
-        </p>
-      </article>
-    </details>
-  </li>
+    <div class="mr-auto rounded-lg rounded-tr-none my-2 p-2 text-sm  bg-green-300/60 flex flex-col relative speech-bubble-right">
+        
+        <p class="text-right">Hola Hernán! Cómo está? Por supuesto que sí. Una vez que terminamos
+            con tu trámite de alta en el monotributo vas a recibir información
+            detallada de los impuestos que te corresponden. Si desean un
+            asesoramiento más completo, ya tienen nuestro contacto para
+            escribirnos!</p>
+        <Verify hora="12:01" /> 
+    </div>
 
-  <li>
-    <details class="group">
-      <summary
-        class="flex items-center gap-3 px-4 py-3 font-medium marker:content-none hover:cursor-pointer"
-      >
-        <svg
-          class="w-5 h-5 text-gray-500 transition group-open:rotate-90"
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          fill="currentColor"
-          viewBox="0 0 16 16"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
-          >
-          </path>
-        </svg>
-        <span class="font-semibold"
-          >María del Rosario: Buenas tardes, ustedes realizan la
-          Recategorización del monotributo? Nunca lo presenté y estoy pagando un
-          Monotributo más alto. Aguardo por su respuesta.</span
-        >
-      </summary>
 
-      <article class="px-4 pb-4">
-        <p>
-          Hola María del Rosario! Cómo estás? Claro que sí, nuestro servicio de
-          “Bono Mensual” incluye la presentación en tiempo y forma de las
-          Recategorizaciones para monotributistas. Si solamente necesitás un
-          chequeo de tu situación actual, podes seleccionar el trámite de
-          “Consultas” para que podamos ayudarte. No dudes en escribirnos!
-          Saludos!
-        </p>
-      </article>
-    </details>
-  </li>
+    <div class="ml-auto rounded-lg rounded-tl-none my-2 p-2 text-sm bg-white flex flex-col relative speech-bubble-left">
+        <p >Lucía: Buenos días, quisiera saber si brindan algún asesoramiento
+            mensual. Gracias</p>
+        <p class="text-gray-600 text-xs text-right leading-none">11:50</p>
+    </div>
+
+    <div class="mr-auto rounded-lg rounded-tr-none my-2 p-2 text-sm  bg-green-300/60 flex flex-col relative speech-bubble-right">
+        
+        <p class="text-right">Hola Lucía! Cómo estás? Sí, contamos con un equipo de contadores
+            capacitados para brindarte un seguimiento mensual de tu monotributo.
+            Solamente deberías seleccionar la opción de “Bono Mensual” en nuestra
+            página web, para poder contactarte a la brevedad. No dudes en
+            escribirnos. Saludos!</p>
+        <Verify hora="11:53"/> 
+    </div>
+
+
+    <div class="ml-auto rounded-lg rounded-tl-none my-2 p-2 text-sm bg-white flex flex-col relative speech-bubble-left">
+        <p >Mario: Hola, estoy necesitando facturar pero el sistema de AFIP no me
+            deja. Estoy activo en el monotributo pero no encuentro dónde facturar.</p>
+        <p class="text-gray-600 text-xs text-right leading-none">16:23</p>
+    </div>
+
+    <div class="mr-auto rounded-lg rounded-tr-none my-2 p-2 text-sm  bg-green-300/60 flex flex-col relative speech-bubble-right">
+        
+        <p class="text-right">Hola Mario! Cómo estás? Podemos enviarte un video “tutorial” para
+            saber cómo facturar o brindarte un asesoramiento vía llamada.
+            Solamente deberías seleccionar la opción de “Consultas” en nuestra
+            página web, para poder contactarte a la brevedad. Saludos!</p>
+        <Verify hora="16:26" /> 
+    </div>
+
+
+    <div class="ml-auto rounded-lg rounded-tl-none my-2 p-2 text-sm bg-white flex flex-col relative speech-bubble-left">
+        <p >María del Rosario: Buenas tardes, ustedes realizan la
+            Recategorización del monotributo? Nunca lo presenté y estoy pagando un
+            Monotributo más alto. Aguardo por su respuesta.</p>
+        <p class="text-gray-600 text-xs text-right leading-none">14:32</p>
+    </div>
+
+    <div class="mr-auto rounded-lg rounded-tr-none my-2 p-2 text-sm  bg-green-300/60 flex flex-col relative speech-bubble-right">
+        
+        <p class="text-right">Hola María del Rosario! Cómo estás? Claro que sí, nuestro servicio de
+            “Bono Mensual” incluye la presentación en tiempo y forma de las
+            Recategorizaciones para monotributistas. Si solamente necesitás un
+            chequeo de tu situación actual, podes seleccionar el trámite de
+            “Consultas” para que podamos ayudarte. No dudes en escribirnos!
+            Saludos!</p>
+        <Verify hora="14:37"/> 
+    </div>
+
+
+    <div class="ml-auto rounded-lg rounded-tl-none my-2 p-2 text-sm bg-white flex flex-col relative speech-bubble-left">
+        <p >Francisca: Hola! Ustedes hacen las Declaraciones Juradas Mensuales de
+            Ingresos Brutos en Provincia de Buenos Aires? Gracias</p>
+        <p class="text-gray-600 text-xs text-right leading-none">09:50</p>
+    </div>
+
+    <div class="mr-auto rounded-lg rounded-tr-none my-2 p-2 text-sm  bg-green-300/60 flex flex-col relative speech-bubble-right">
+        
+        <p class="text-right">Hola Francisca! Cómo estás? Sí, nosotros brindamos el servicio mensual
+            que incluye el armado y presentación de las Declaraciones Juradas
+            Mensuales de Ingresos Brutos, ya sea en CABA, Provincia de Buenos
+            Aires o Convenio Multilateral, según corresponda. Solamente deberías
+            seleccionar la opción de "Consultas" en nuestra página web, para poder
+            contactarte a la brevedad. Saludos!</p>
+        <Verify hora="09:13" /> 
+    </div>
+
+</div>
+ 
+
+<!--   
+     
 
   <li>
     <details class="group">
@@ -224,5 +152,33 @@
       </article>
     </details>
   </li>
-</ul>
+</di>-->
 </div>
+ 
+<style>
+    .speech-bubble-right::before {
+        content: "";
+        width: 0px;
+        height: 0px;
+        position: absolute;
+        border-left: 5px solid rgba(134,239,172,0.6);
+        border-right: 5px solid transparent;
+        border-top: 5px solid rgba(134,239,172,0.6);
+        border-bottom: 5px solid transparent;
+        right: -10px;
+        top: 0;
+    }
+
+    .speech-bubble-left::before {
+        content: "";
+        width: 0px;
+        height: 0px;
+        position: absolute;
+        border-left: 5px solid transparent;
+        border-right: 5px solid white;
+        border-top: 5px solid white;
+        border-bottom: 5px solid transparent;
+        left: -10px;
+        top: 0;
+    }
+</style>
