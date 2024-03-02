@@ -2,6 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import SectionContainer from '../components/SectionContainer.astro';
 import Hero from '../components/Hero.astro';
+import Carousel from '../components/Carousel.astro';
+
 import AboutMe from '../components/AboutMe.astro';
 import Faq from '../components/Faq.astro';
 import Cards from '../components/Cards.astro';
@@ -11,9 +13,9 @@ import Cards from '../components/Cards.astro';
     description='La web de Santi, te ayuda con los trámites para iniciar tus proyectos'>
     <main class="px-4">
         <SectionContainer   class="py-16 md:py-36">
-          <Hero>
+          <Carousel>
           </slot>
-        </Hero>
+        </Carousel>
        
         </SectionContainer>
        
