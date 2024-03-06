@@ -1,0 +1,85 @@
+---
+export const prerender = false;
+
+if (Astro.request.method === "POST") {
+  try {
+    const data = await Astro.request.formData();
+    const name = data.get("username");
+    const email = data.get("email");
+    const password = data.get("password");
+
+    console.log(name, email, password);
+
+    // Do something with the data
+  } catch (error) {
+    if (error instanceof Error) {
+      console.error(error.message);
+    }
+  }
+}
+---
+
+<!-- Container for demo purpose -->
+<div class="container my-12 mx-auto md:px-6">
+  <!-- Section: Design Block -->
+  <section class="mb-32">
+    <div class="flex flex-wrap">
+        <div class="w-full shrink-0 grow-0 basis-auto lg:w-3/5">
+        <h2 class="mb-6 text-3xl font-bold">Contactanos</h2>
+        <p class="mb-6 text-neutral-500 text-pretty leading-relaxed">
+          Todos los emprendedores, cuentapropistas, y demás trabajadores
+          independientes requieren la guía y asesoramiento constante de un
+          contador. Nosotros ofrecemos un servicio integral que abarca desde las
+          presentaciones formales de las declaraciones juradas impositivas, así
+          como también un asesoramiento personalizado de cada cliente. Contamos
+          con los conocimientos y experiencia que se requiere, teniendo una
+          historia de más de 35 años en el rubro contable impositivo. Previa
+          confirmación, poseen una entrevista presencial o formal con uno de los
+          contadores del estudio. Acordar un día y horario según disponibilidad.
+        </p>
+      </div>
+      <form class="mb-12 w-full shrink-0 grow-0 basis-auto md:px-3 lg:mb-0 lg:w-2/5 lg:px-6">
+
+        <div class="mb-3 w-full">
+            <label class="block font-medium mb-[2px] text-gray-600"  >
+                    Nombre
+            </label>
+            <input type="text" class="px-2 py-2 border w-full outline-none rounded-md" id="exampleInput90" 
+            placeholder="Nombre" />
+        </div>
+
+        <div class="mb-3 w-full">
+            <label class="block font-medium mb-[2px]  text-gray-600"  >
+                    Correo electrónico
+            </label>
+            <input type="email" class="px-2 py-2 border w-full outline-none rounded-md" id="exampleInput90"
+                    placeholder="Correo electrónico" />
+        </div>
+
+        <div class="mb-3 w-full">
+            <label class="block font-medium mb-[2px] text-gray-600"  >
+                    Teléfono
+            </label>
+            <input type="text" class="px-2 py-2 border w-full outline-none rounded-md" id="exampleInput90" 
+            placeholder="Teléfono" />
+        </div>
+
+        <div class="mb-3 w-full">
+            <label class="block font-medium mb-[2px]  text-gray-600"  >
+                    Mensaje
+            </label>
+            <textarea class="px-2 py-2 border rounded-[5px] w-full outline-none" placeholder="Escriba su mensaje" name="" id=""></textarea>
+        </div>
+
+        <button type="button"
+                class="mb-6 inline-block w-full rounded bg-blue-600 px-6 py-2.5 font-medium uppercase leading-normal
+                 text-white hover:shadow-md hover:bg-blue-800">
+                enviar
+        </button>
+
+    </form>
+    </div>
+  </section>
+  <!-- Section: Design Block -->
+</div>
+<!-- Container for demo purpose -->
