@@ -1,15 +1,17 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import SectionContainer from '../components/SectionContainer.astro'; 
+import Banner from '../components/icons/Banner.astro';
+import ExplicacionCeta from '../components/ExplicacionCETA.astro';
 ---
 
 <Layout title="MONOTRIBUTO.NET | La web de Santi" 
     description='La web de Santi, te ayuda con los trámites para iniciar tus proyectos'>
     <main class="px-4">
         <SectionContainer   class="py-16 md:py-36">
-            <h1
-            class=" text-2xl md:text-3xl  font-bold text-pretty tracking-tight text-gray-800   light:text-black"
-          >Certificados CETA</h1>
+            <Banner title="Formulario C.E.T.A."/>
+
+        <ExplicacionCeta/>
           </slot> 
         </SectionContainer>
         <div class="absolute inset-0 -z-10  bottom-0 left-0 right-0 top-1/2 bg-[radial-gradient(circle_170px_at_0%_200px,#79b2f8,transparent)]"></div>

@@ -1,5 +1,8 @@
 ---
-import Hero from "./Hero.astro"
+import HeroSanti from "./HeroSanti.astro"
+import HeroTramites from "./HeroTramites.astro"
+import HeroAlta from "./HeroAlta.astro"
+
 ---
 
 <div class="max-w-full -z-10 mx-auto mt-10">
@@ -8,11 +11,10 @@ import Hero from "./Hero.astro"
         <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" navigation="true" space-between="30"
         centered-slides="true" autoplay-delay="3500" autoplay-disable-on-interaction="false">
         <swiper-slide> 
-            <Hero />
+            <HeroSanti />
         </swiper-slide>
-        <swiper-slide>Slide 2</swiper-slide>
-        <swiper-slide>Slide 3</swiper-slide>
-        <swiper-slide>Slide 4</swiper-slide> 
+        <swiper-slide><HeroTramites /></swiper-slide>
+        <swiper-slide><HeroAlta /></swiper-slide> 
       </swiper-container>
     
       <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
