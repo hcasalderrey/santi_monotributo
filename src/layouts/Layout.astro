@@ -1,6 +1,8 @@
 ---
 import Header from '../components/pages/Header.astro';
 import Footer from '../components/pages/Footer.astro'; 
+import Whatsapp from '../components/icons/Whatsapp.astro';
+
 import '@fontsource-variable/encode-sans';
 import { ViewTransitions } from 'astro:transitions';
 
@@ -41,23 +43,26 @@ const { title, description } = Astro.props;
 
 	 
 		<title>{title}</title>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
         <ViewTransitions />
 	</head>
    
-    <body class="relative text-black   px-4">
+    <body class="relative text-black   ">
 
         <div class="absolute inset-0 -z-10  bottom-0 left-0 right-0 top-0 
         md:bg-[radial-gradient(circle_500px_at_90%_200px,#79b2f8,transparent)]
         bg-[radial-gradient(circle_250px_at_90%_200px,#79b2f8,transparent)]
         
         "></div>
-
- 
         <Header />
-        <main id="main-content" class="container mx-auto mt-50">
+        <main id="main-content" class="container mx-auto">
           <slot />
         </main>
         <Footer />
+        <a href="#" class="whatsapp" target="_blank">  <Whatsapp class="fa fa-whatsapp whatsapp-icon "/>   </a>
 	</body>
 </html>
 <style is:global>
@@ -78,5 +83,23 @@ const { title, description } = Astro.props;
 		background: #efefef;
 		 
 	}
+
+    .whatsapp {
+  position:fixed;
+  width:60px;
+  height:60px;
+  bottom:40px;
+  right:40px;
+  background-color:#25d366;
+  color:#FFF;
+  border-radius:50px;
+  text-align:center;
+  font-size:30px;
+  z-index:100;
+}
+
+.whatsapp-icon {
+  margin-top:8px;
+}
 	 
 </style>
