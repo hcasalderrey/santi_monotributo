@@ -1,0 +1,28 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SectionContainer from "../components/SectionContainer.astro"; 
+
+import {Basic} from "../components/Basic";
+---
+
+<Layout
+  title="MONOTRIBUTO.NET | La web de Santi"
+  description="La web de Santi, te ayuda con los trámites para iniciar tus proyectos"
+>
+  <main class="px-4">
+    <SectionContainer class="py-16 md:py-36">
+      <slot>
+        <Basic  client:load  />
+      </slot>
+    </SectionContainer>
+    <div
+      class="absolute inset-0 -z-10 bottom-0 left-0 right-0 top-1/2 bg-[radial-gradient(circle_170px_at_0%_200px,#79b2f8,transparent)]"
+    >
+    </div>
+
+    <div
+      class="absolute inset-0 -z-10 bottom-0 left-0 right-0 top-3/4 bg-[radial-gradient(circle_170px_at_80%_200px,#79b2f8,transparent)]"
+    >
+    </div>
+  </main>
+</Layout>
