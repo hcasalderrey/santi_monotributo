@@ -1,3 +1,26 @@
+--- 
+import Whatsapp from "./icons/Whatsapp.astro";
+const numero_whatsapp = import.meta.env.PUBLIC_NUMERO_WHATSAPP
+const message = 
+  {
+    name: "Quiero inscribirme...",
+    href: `${numero_whatsapp}?text=Hola,%20quiero%20inscribirme%20al%20regimen%20de%20responsable%20inscripto%20,%20¿me%20pueden%20ayudar%20a%20realizarlo?.`,
+  };
+---
+
+<div class="flex justify-center my-6">
+  <a
+    type="button"
+    href={message.href}
+    target="_blank"
+    class="flex items-center bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded"
+  >
+    <Whatsapp class="fa fa-whatsapp whatsapp-icon" />
+    {message.name}
+  </a>
+</div>
+
+
 <div class="text-pretty tracking-wide text-gray-800 mt-4 drop-shadow-sm">
   <p class="mb-2">
     Un <b>Responsable Inscripto</b> en Argentina es una persona (física o jurídica)
@@ -20,14 +43,16 @@
 
    
 
-  <div class="flex justify-center mt-6">
+
+  <div class="flex justify-center my-6">
     <a
       type="button"
-      href="#"
+      href={message.href}
       target="_blank"
-      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+      class="flex items-center bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded"
     >
-      Quiero inscribirme..
+      <Whatsapp class="fa fa-whatsapp whatsapp-icon" />
+      {message.name}
     </a>
   </div>
 </div>

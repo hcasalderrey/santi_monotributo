@@ -1,13 +1,26 @@
-<div class="flex justify-center mt-6">
-    <a
-      type="button"
-      href="#"
-      target="_blank"
-      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-    >
-      Quiero obtener el certificado..
-    </a>
-  </div>
+--- 
+import Whatsapp from "./icons/Whatsapp.astro";
+const numero_whatsapp = import.meta.env.PUBLIC_NUMERO_WHATSAPP
+const message = 
+  {
+    name: "Quiero obtener el formulario...",
+    href: `${numero_whatsapp}?text=Hola,%20quiero%20obtener%20el%20formulario%20C.E.T.A%20,%20¿me%20pueden%20ayudar%20a%20realizarlo?.`,
+  };
+---
+
+<div class="flex justify-center my-6">
+  <a
+    type="button"
+    href={message.href}
+    target="_blank"
+    class="flex items-center bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded"
+  >
+    <Whatsapp class="fa fa-whatsapp whatsapp-icon" />
+    {message.name}
+  </a>
+</div>
+
+ 
 
 <div class="text-pretty tracking-wide text-gray-800 mt-4 drop-shadow-sm">
   <p class="my-2">
@@ -107,15 +120,18 @@
     </ul>
   </p>
 
-  <div class="flex justify-center mt-6">
+
+  <div class="flex justify-center my-6">
     <a
-      type="link"
-      href="#"
+      type="button"
+      href={message.href}
       target="_blank"
-      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+      class="flex items-center bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded"
     >
-      Quiero obtener el certificado..
+      <Whatsapp class="fa fa-whatsapp whatsapp-icon" />
+      {message.name}
     </a>
+  </div>
 
    
 

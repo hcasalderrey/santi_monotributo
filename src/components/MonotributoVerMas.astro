@@ -1,0 +1,106 @@
+ 
+
+<script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js" is:inline></script>
+<script src="https://unpkg.com/alpinejs" defer is:inline></script>
+
+<div class=' items-center justify-start ' x-data="{ reportsOpen: false }">
+    
+        <div class=' mx-auto space-y-6'>
+            
+    
+            <div @click="reportsOpen = !reportsOpen" class='flex items-center 
+             text-blue-600  border-b   mt-32 md:mt-0 mb-5 mx-auto'>
+            <div class='w-10 border-r px-2 transform transition duration-300 ease-in-out' :class="{'rotate-90': reportsOpen,' -translate-y-0.0': !reportsOpen }">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+            </svg>          
+            </div>
+            <div class='items-center px-2 py-3'>
+            <div class='mx-3'>
+                <button class="hover:underline">Información adicional</button>
+            </div>
+            </div>
+            </div>
+
+            <div class=" p-5 md:p-0 w-full transform transition duration-300 ease-in-out border-b pb-10"
+            x-cloak x-show="reportsOpen" x-collapse x-collapse.duration.500ms >
+
+            <h2 class="text-xl font-bold mt-4">Consideraciones</h2>
+
+    <h3 class="text-lg font-bold mt-2">ACTIVIDAD DECLARADA</h3>
+    <p>
+      Es importante, ya que de tu actividad depende el TIPO de Monotributo que
+      vas a abonar y de los límites de facturación. Hasta 3 actividades podes
+      tener como monotributista.
+    </p>
+
+    <h3 class="text-lg font-bold mt-2">FACTURACIÓN</h3>
+    <p>
+      Al ser monotributista vas a emitir Comprobantes tipo "C" para tus
+      ventas/servicios en la Argentina. Las facturas se pueden emitir desde la
+      página de AFIP ingresando con tu CUIT y clave fiscal, desde el servicio
+      que se llama "Comprobantes en Línea".
+    </p>
+
+    <h3 class="text-lg font-bold mt-2">PAGO DE IMPUESTOS</h3>
+    <p>
+      La fecha de vencimiento del monotributo es al día 20 de cada mes, o primer
+      día hábil posterior. Se puede abonar de las siguientes maneras: Débito
+      automático de tu cuenta bancaria, Tarjeta de Crédito (Solo para el mes
+      vigente), Mercado Pago (Solo para el mes vigente) o VEP (Volante
+      Electrónico de Pago). El monotributo se abona todos los peses desde la
+      fecha de alta, sin importar que hayan facturado o no.
+    </p>
+
+    <h3 class="text-lg font-bold mt-2">OBRA SOCIAL</h3>
+    <p>
+      Pagando el Monotributo, se encuentran aportando a una Obra Social. Para
+      poder recibir las prestaciones de la misma, deben concluir el trámite de
+      inscripción en alguna oficina de la obra social presentando todas las
+      constancias enviadas por el alta en el monotributo. Una vez inscripto,
+      podés tramitar la derivación de aportes en la obra social solicitada,
+      enviando los siguientes 3 formularios que adjunté en el presente mail:
+      Constancia de Inscripción del Monotributo, Formulario 152 (Credencial de
+      Pago) y Formulario 184.
+    </p>
+    <h3 class="text-lg font-bold mt-2">INGRESOS BRUTOS</h3>
+    <h3 class="text-lg font-bold mt-2">ARBA</h3>
+    <p>
+      Con respecto a Ingresos Brutos tramitamos el alta en el régimen unificado
+      de ARBA. Se abona junto al monotributo dentro del mismo VEP. Vas a poder
+      verlo detallado en el Formulario 184.
+    </p>
+    <h3 class="text-lg font-bold mt-2">AGIP - Régimen Simplificado</h3>
+    <p>
+      Con respecto a Ingresos Brutos tramitamos el alta en el régimen
+      simplificado de AGIP. Se abona una cuota bimestral, descargando la boleta
+      desde la página del gobierno de la Ciudad.
+    </p>
+    <h3 class="text-lg font-bold mt-2">AGIP - Régimen General</h3>
+    <p>
+      Con respecto a Ingresos Brutos tramitamos el alta en el régimen general de
+      AGIP. Se abona mes a mes según una Declaración Jurada Mensual OBLIGATORIA.
+      La falta de presentación generará deuda e infracciones con el fisco.
+      Recomendamos el asesoramiento de un contador para la presentación mensual,
+      en tiempo y forma. Nosotros ofrecemos dicho servicio a través de un bono
+      mensual.
+    </p>
+    <h3 class="text-lg font-bold mt-2">Convenio multilateral</h3>
+    <p>
+      Con respecto a Ingresos Brutos tramitamos el alta en el régimen de
+      Convenio Multilateral. Se abona mes a mes según una Declaración Jurada
+      Mensual OBLIGATORIA. La falta de presentación generará deuda e
+      infracciones con el fisco. Recomendamos el asesoramiento de un contador
+      para la presentación mensual, en tiempo y forma. Nosotros ofrecemos dicho
+      servicio a través de un bono mensual.
+    </p>
+ 
+            
+            </div>
+
+        </div>
+     
+</div>
+
+ 
+     

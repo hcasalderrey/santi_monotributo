@@ -1,3 +1,26 @@
+---
+import MonotributoVerMas from "./MonotributoVerMas.astro";
+import Whatsapp from "./icons/Whatsapp.astro";
+const numero_whatsapp = import.meta.env.PUBLIC_NUMERO_WHATSAPP
+const message = 
+  {
+    name: "Quiero inscribirme...",
+    href: `${numero_whatsapp}?text=Hola,%20quiero%20inscribirme%20al%20monotributo,%20¿me%20pueden%20ayudar%20a%20realizarlo?.`,
+  };
+---
+
+<div class="flex justify-center my-6">
+  <a
+    type="button"
+    href={message.href}
+    target="_blank"
+    class="flex items-center bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded"
+  >
+    <Whatsapp class="fa fa-whatsapp whatsapp-icon" />
+    {message.name}
+  </a>
+</div>
+
 <div class="text-pretty tracking-wide text-gray-800 mt-4 drop-shadow-sm">
   <p class="mb-2">
     El <b>Monotributo</b> es un Régimen Simplificado para pequeños contribuyentes.
@@ -52,84 +75,20 @@
     </ul>
   </p>
 
-  <h2 class="text-xl font-bold mt-4">Consideraciones</h2>
-
-  <h3 class="text-lg font-bold mt-2">ACTIVIDAD DECLARADA</h3>
-  <p>
-    Es importante, ya que de tu actividad depende el TIPO de Monotributo que vas
-    a abonar y de los límites de facturación. Hasta 3 actividades podes tener
-    como monotributista.
-  </p>
-
-  <h3 class="text-lg font-bold mt-2">FACTURACIÓN</h3>
-  <p>
-    Al ser monotributista vas a emitir Comprobantes tipo "C" para tus
-    ventas/servicios en la Argentina. Las facturas se pueden emitir desde la
-    página de AFIP ingresando con tu CUIT y clave fiscal, desde el servicio que
-    se llama "Comprobantes en Línea".
-  </p>
-
-  <h3 class="text-lg font-bold mt-2">PAGO DE IMPUESTOS</h3>
-  <p>
-    La fecha de vencimiento del monotributo es al día 20 de cada mes, o primer
-    día hábil posterior. Se puede abonar de las siguientes maneras: Débito
-    automático de tu cuenta bancaria, Tarjeta de Crédito (Solo para el mes
-    vigente), Mercado Pago (Solo para el mes vigente) o VEP (Volante Electrónico
-    de Pago). El monotributo se abona todos los peses desde la fecha de alta,
-    sin importar que hayan facturado o no.
-  </p>
-
-  <h3 class="text-lg font-bold mt-2">OBRA SOCIAL</h3>
-  <p>
-    Pagando el Monotributo, se encuentran aportando a una Obra Social. Para
-    poder recibir las prestaciones de la misma, deben concluir el trámite de
-    inscripción en alguna oficina de la obra social presentando todas las
-    constancias enviadas por el alta en el monotributo. Una vez inscripto, podés
-    tramitar la derivación de aportes en la obra social solicitada, enviando los
-    siguientes 3 formularios que adjunté en el presente mail: Constancia de
-    Inscripción del Monotributo, Formulario 152 (Credencial de Pago) y
-    Formulario 184.
-  </p>
-  <h3 class="text-lg font-bold mt-2">INGRESOS BRUTOS</h3>
-  <h3 class="text-lg font-bold mt-2">ARBA</h3>
-  <p>
-    Con respecto a Ingresos Brutos tramitamos el alta en el régimen unificado de
-    ARBA. Se abona junto al monotributo dentro del mismo VEP. Vas a poder verlo
-    detallado en el Formulario 184.
-  </p>
-  <h3 class="text-lg font-bold mt-2">AGIP - Régimen Simplificado</h3>
-  <p>
-    Con respecto a Ingresos Brutos tramitamos el alta en el régimen simplificado
-    de AGIP. Se abona una cuota bimestral, descargando la boleta desde la página
-    del gobierno de la Ciudad.
-  </p>
-  <h3 class="text-lg font-bold mt-2">AGIP - Régimen General</h3>
-  <p>
-    Con respecto a Ingresos Brutos tramitamos el alta en el régimen general de
-    AGIP. Se abona mes a mes según una Declaración Jurada Mensual OBLIGATORIA.
-    La falta de presentación generará deuda e infracciones con el fisco.
-    Recomendamos el asesoramiento de un contador para la presentación mensual,
-    en tiempo y forma. Nosotros ofrecemos dicho servicio a través de un bono
-    mensual.
-  </p>
-  <h3 class="text-lg font-bold mt-2">Convenio multilateral</h3>
-  <p>
-    Con respecto a Ingresos Brutos tramitamos el alta en el régimen de Convenio
-    Multilateral. Se abona mes a mes según una Declaración Jurada Mensual
-    OBLIGATORIA. La falta de presentación generará deuda e infracciones con el
-    fisco. Recomendamos el asesoramiento de un contador para la presentación
-    mensual, en tiempo y forma. Nosotros ofrecemos dicho servicio a través de un
-    bono mensual.
-  </p>
-
-  <div class="flex justify-center mt-6">
+   
+  <MonotributoVerMas />
+  <div class="flex justify-center my-6">
     <a
       type="button"
-      href="#"
+      href={message.href}
       target="_blank"
-      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+      class="flex items-center bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded"
     >
-      Quiero inscribirme..
+      <Whatsapp class="fa fa-whatsapp whatsapp-icon" />
+      {message.name}
     </a>
   </div>
 </div>
+
+
+ 
