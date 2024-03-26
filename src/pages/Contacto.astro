@@ -2,6 +2,8 @@
 import Layout from "../layouts/Layout.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import Banner from "../components/icons/Banner.astro";
+
+//import { Formulario } from "../components/Formulario";
 import FormularioContacto from "../components/pages/FormularioContacto.astro";
 ---
 
@@ -14,7 +16,8 @@ import FormularioContacto from "../components/pages/FormularioContacto.astro";
       <slot>
         <Banner title="Contacto" />
 
-        <FormularioContacto />
+        <!--<Formulario client:load />-->
+        <FormularioContacto  />
       </slot>
     </SectionContainer>
     <div

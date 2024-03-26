@@ -10,6 +10,7 @@ const pages = [
 	{ name: "CERTIFICADOS CETA", href: "/ceta"},
 	{ name: "ORIGEN DE FONDOS", href: "/origenfondos"},
     { name: "CONTACTO", href: "/contacto"},
+
 ].map((page) => ({
 	...page,
 	active: Astro.url.pathname === page.href,
