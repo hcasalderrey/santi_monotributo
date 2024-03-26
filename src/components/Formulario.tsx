@@ -1,6 +1,8 @@
  
 import emailjs from "@emailjs/browser";
 
+
+
 export const Formulario = () => {
   const redirect = (url: any, asLink = true) =>
     asLink ? (window.location.href = url) : window.location.replace(url);
@@ -8,8 +10,8 @@ export const Formulario = () => {
     e.preventDefault();
 
     emailjs
-      .sendForm("service_dh7zv08", "template_7fcufaj", e.target, {
-        publicKey: "ggwo5TsKq9HnM1gPt",
+      .sendForm(import.meta.env.SERVICE_ID, import.meta.env.TEMPLATE_ID, e.target, {
+        publicKey: import.meta.env.PUBLIC_KEY,
       })
       .then(
         () => {
