@@ -16,6 +16,7 @@
     "@astrojs/tailwind": "^5.1.0",
     "@emailjs/browser": "^4.3.3",
     "@fontsource-variable/encode-sans": "^5.0.8",
+    "@fontsource/pt-serif": "^5.1.0",
     "@midudev/tailwind-animations": "^0.0.7",
     "@types/react": "^18.2.64",
     "@types/react-dom": "^18.2.21",

@@ -7,8 +7,9 @@ import Close from "../icons/Close.astro";
 const pages = [
 	{ name: "MONOTRIBUTO", href: "/monotributo" },
 	{ name: "RESPONSABLES INSCRIPTOS", href: "/responsablesinscriptos" },
-	{ name: "CERTIFICADOS CETA", href: "/ceta"},
 	{ name: "ORIGEN DE FONDOS", href: "/origenfondos"},
+    { name: "BONOS MENSUALES", href: "/bonos"},
+    { name: "HABLA CON NOSOTROS", href: "https://wa.me/+5401158781880?text=Hola,%20necesito%20contactarlos%20para%20obtener%20información..."},
     { name: "CONTACTO", href: "/contacto"},
 
 ].map((page) => ({
@@ -20,18 +21,18 @@ const pages = [
 <header transition:persist class="fixed top-0 z-10 items-center justify-center w-full mx-auto">
   <div class="container mx-auto">
     
-    <nav class="relative px-4 py-4 flex justify-between items-center
-     bg-white ">
-      <a class="text-2xl font-bold leading-none items-center inline-flex" href="/">
-        <img src="/logo.webp" class="h-12" style="filter: drop-shadow(0 0 3px rgba(0,0,0,0.8));" alt="">
-        <span class="text-gray-900 pl-5 uppercase">Monotributo</span>
-        <span class="text-blue-600">.net</span>
+    <nav class="relative px-6 py-6 flex justify-between items-center
+     bg-gray rounded-3xl shadow-2xl">
+      <a class="text-base  md:text-xl   lg:text-2xl  font-bold leading-none items-center inline-flex" href="/">
+        <img src="/logo.webp" class="h-24" style="filter: drop-shadow(0 0 0.5px rgba(0,0,0,0.8));" alt="">
+        <!--<span class="text-gray-900 pl-5 uppercase">Monotributo</span>
+        <span class="text-accent">.net</span>-->
         
 
       </a>
       <div class="lg:hidden">
         <button class="navbar-burger flex items-center
-         text-blue-600 p-3 ">
+         text-accent p-3 ">
           <Hamburger />
         </button>
       </div>
@@ -48,7 +49,7 @@ const pages = [
                 <a
                     href={href}
                     class:list={[
-                        "block p-4 text-sm font-semibold text-gray-500 hover:bg-blue-50 hover:text-blue-600 rounded transform motion-safe:hover:scale-105",
+                        "block p-4 text-sm font-semibold text-gray-500  hover:bg-accentmorelight  hover:text-gray-700 rounded-xl transform motion-safe:hover:scale-105",
                                      
                     ]}
                     id={`nav-link-${key}`}
@@ -67,13 +68,13 @@ const pages = [
     <div class="navbar-menu relative z-50 hidden">
       <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
       <nav
-        class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto"
+        class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-8 px-8 bg-gray border-r overflow-y-auto"
       >
         <div class="flex items-center mb-8">
           <a class="mr-auto text-3xl font-bold leading-none" href="/">
             <img src="/logo.webp" class="h-12" alt="">
           </a>
-          <button class="navbar-close">
+          <button class="navbar-close text-accent ">
             <Close />
           </button>
         </div>
@@ -87,7 +88,7 @@ const pages = [
                         <a
                             href={href}
                             class:list={[
-                                "block p-4 text-sm font-semibold text-gray-500 hover:bg-blue-50 hover:text-blue-600 rounded transform motion-safe:hover:scale-105",
+                                "block p-4 text-sm font-semibold text-gray-500  hover:bg-accentmorelight  hover:text-gray-700 rounded-xl transform motion-safe:hover:scale-105",
                                              
                             ]}
                             id={`nav-link-${key}`}
@@ -106,7 +107,7 @@ const pages = [
           <div class="pt-6">
              
           </div>
-          <p class="my-4 text-xs text-center text-gray-400">
+          <p class="my-4 text-xs text-center text-accentligth">
             <span>Copyright © 2024</span>
           </p>
         </div>
@@ -117,7 +118,7 @@ const pages = [
 
 <script>
     // Burger menus
-    document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("astro:page-load", function () {
       // open
       const burger = document.querySelectorAll(".navbar-burger");
       const menu = document.querySelectorAll(".navbar-menu");
@@ -151,7 +152,9 @@ const pages = [
           backdrop[i].addEventListener("click", function () {
             for (var j = 0; j < menu.length; j++) {
               menu[j].classList.toggle("hidden");
+              
             }
+             
           });
         }
       }

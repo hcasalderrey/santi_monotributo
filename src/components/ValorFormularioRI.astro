@@ -1,0 +1,49 @@
+<!-----
+const { formulario } = Astro.props;
+----->
+
+  
+<div>
+    <span class="text-5xl font-semibold tracking-tight text-gray-900" id="valorRI"
+    ></span>
+  </div>
+ 
+
+<script >
+     let tramite = "responsableinscripto";
+  const formatter = new Intl.NumberFormat("es-AR", {
+    style: "decimal",
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0,
+  });
+  var input  = document.getElementById("valorRI") as HTMLElement; 
+ 
+
+ 
+  
+   
+  const datos = await fetch("../backend/data/valor.json").then((response) =>
+    response.json()
+  ); 
+
+  var valores = [];
+  var length = datos.length;
+  for(var i = length-1;i>=0;i--){
+    valores.push(datos[i]);
+  }
+
+  let valorTotal ="";
+
+
+valores.forEach(function (data) { 
+    if(data.tipo == tramite){
+        valorTotal = formatter.format(parseFloat(data.valor));
+    }
+  })
+ 
+ 
+
+  input.innerText   = "$" + valorTotal; 
+
+  //    }
+</script>

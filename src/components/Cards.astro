@@ -1,30 +1,59 @@
 ---
-import CardItems from "./CardItems.astro"
+import CardItems from "./CardItems.astro";
 ---
-<div id="servicios" class="max-w-full mx-auto py-10">
 
-</div>
+<div id="servicios" class="max-w-full mx-auto py-10"></div>
 
-<div class="mt-10"  >
-    <h2 class="text-2xl font-bold ">Servicios disponibles: </h2>
-    <div class="flex flex-wrap justify-center items-center md:justify-between gap-8  mt-4">
-        <CardItems title="Monotributo" description="Inscripción en el Monotributo (En menos de 24 horas - Incluye obtención de CUIT)" link="./monotributo"> 
-            slot
-        </CardItems>
-        <CardItems title="Responsables Inscriptos" description="Inscripción como Responsable inscripto (En menos de 24 horas - Incluye obtención de CUIT)" link="./responsablesinscriptos">
-            slot
-        </CardItems>
-        <CardItems title="Certificados CETA" description="Formulario CETA (Para la venta de automotores)" link="/ceta"> 
-            slot
-        </CardItems>
-        <CardItems title="Certificaciones Origen de Fondos" description="Certificado de Origen de Fondos (Para la compra de automotores). Solicitado por la UIF" link="/origenfondos"> 
-            slot
-        </CardItems>
-        <CardItems title="Bonos mensuales" description="Armado y presentación de Declaraciones Juradas Mensuales Impositivas" link="/contacto"> 
-            slot
-        </CardItems>
-        <CardItems title="Otros Trámites o consultas" description="Asesoramiento constante" link="/contacto">
-            slot    
-        </CardItems>
-    </div>
+<div class="md:mt-4 lg:mt-10 -mt-8">
+  <h2 class="text-2xl font-bold">Servicios disponibles:</h2>
+  <div class="flex flex-wrap justify-around items-center gap-8 mt-2">
+    
+      <CardItems
+        title="Monotributo"
+        calltoAction="¡ Inscribite ahora !"
+        image="/images/cards/graficos1.avif"
+        description="Inscripción en el Monotributo (En menos de 24 horas - Incluye obtención de CUIT)"
+        link="./monotributo"
+      >
+        slot
+      </CardItems>
+      <CardItems
+        title="Responsables Inscriptos"
+        calltoAction="Contactate"
+        image="/images/cards/graficos2.avif"
+        description="Inscripción como Responsable inscripto (En menos de 24 horas - Incluye obtención de CUIT)"
+        link="./responsablesinscriptos"
+      >
+        slot
+      </CardItems>
+
+      <CardItems
+        title="Certificaciones Origen de Fondos"
+        calltoAction="Iniciar ahora"
+        image="/images/cards/graficos3.avif"
+        description="Certificado de Origen de Fondos (Para la compra de automotores). Solicitado por la UIF"
+        link="/origenfondos"
+      >
+        slot
+      </CardItems>
+      <CardItems
+        title="Bonos mensuales"
+        calltoAction="Conocenos"
+        image="/images/cards/graficos4.avif"
+        description="Armado y presentación de Declaraciones Juradas Mensuales Impositivas"
+        link="/bonos"
+      >
+        slot
+      </CardItems>
+      <CardItems
+        title="Otros Trámites o consultas"
+        calltoAction="Contanos y te ayudamos"
+        image="/images/cards/graficos5.avif"
+        description="Asesoramiento constante"
+        link="/contacto"
+      >
+        slot
+      </CardItems>
+    
+  </div>
 </div>

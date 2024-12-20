@@ -1,33 +1,41 @@
 ---
 import MonotributoVerMas from "./MonotributoVerMas.astro";
-import Whatsapp from "./icons/Whatsapp.astro";
-const numero_whatsapp = import.meta.env.PUBLIC_NUMERO_WHATSAPP
-const message = 
-  {
-    name: "Quiero inscribirme...",
-    href: `${numero_whatsapp}?text=Hola,%20quiero%20inscribirme%20al%20monotributo,%20¿me%20pueden%20ayudar%20a%20realizarlo?.`,
-  };
+import ValorFormulario from "./ValorFormulario.astro";
+ 
+const message = {
+  name: "Inscribirme Ahora",
+  href: '../formularios/monotributo.php',
+};
+import '@fontsource/pt-serif'
 ---
 
-<div class="flex justify-center my-6">
-  <a
-    type="button"
-    href={message.href}
-    target="_blank"
-    class="flex items-center bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded"
-  >
-    <Whatsapp class="fa fa-whatsapp whatsapp-icon" />
-    {message.name}
-  </a>
-</div>
+<div class="flex justify-center my-4">
 
-<div class="text-pretty tracking-wide text-gray-800 mt-4 drop-shadow-sm">
+  
+
+    
+    <a
+     
+      href="../formulariomonotributo"
+     
+      class="mt-4 bg-accentligth hover:bg-accent text-whitegray font-bold py-2 px-4 rounded-2xl leading-relaxed"
+      >
+     
+      {message.name}
+    </a>
+  </div>
+
+  <div class="flex justify-start">
+    <span class="md:text-5xl text-4xl font-semibold tracking-tight text-gray-900">Valor del tramite: &ensp; </span> <ValorFormulario formulario="Monotributo" />
+  </div>
+
+<div class="text-pretty text-lg md:text-xl    tracking-wide   mt-4   font-pt">
   <p class="mb-2">
     El <b>Monotributo</b> es un Régimen Simplificado para pequeños contribuyentes.
-    Es simplificado por que se pagan 3 componentes juntos (Impuestos – Aporte Jubilatorio
-    – Obra Social). Al ser para pequeños contribuyentes, ser Monotributista tiene
+    Es simplificado por que se pagan 3 componentes juntos (Impuestos - Aporte Jubilatorio
+    - Obra Social). Al ser para pequeños contribuyentes, ser Monotributista tiene
     bastantes limitaciones. Las 2 más conocidas son:
-    <ul class="space-y-4 text-left text-gray-600 px-10">
+    <ul class="space-y-4 text-left px-10">
       <li class="flex items-center space-x-3 rtl:space-x-reverse">
         <svg
           class="flex-shrink-0 w-3.5 h-3.5 text-green-500 dark:text-green-400"
@@ -43,11 +51,10 @@ const message =
             stroke-width="2"
             d="M1 5.917 5.724 10.5 15 1.5"></path>
         </svg>
-        <span
-          >Límite Anual de Facturación ( Para el primer semestre del 2024 aplica
-          lo siguiente: Si prestas un Servicio el límite máximo anual es de
-          $11.916.410,45 - Si vendes Productos el límite máximo anual es de
-          $16.957.968,71)
+        <span>
+          Límite Anual de Facturación para el 2024, aplica el siguiente
+          parámetro: Si prestas un Servicio o vendes productos el límite máximo
+          anual es de $68.000.000,00.-
         </span>
       </li>
       <li class="flex items-center space-x-3 rtl:space-x-reverse">
@@ -66,29 +73,24 @@ const message =
             d="M1 5.917 5.724 10.5 15 1.5"></path>
         </svg>
         <span
-          >Límite del Precio Unitario (Si lo que vendes supera los $180.589,67
-          no podrías ser Monotributista). Por ejemplo, si vendés computadoras
-          difícilmente puedas ser monotributista, ya que cualquier computadora
-          superaría ese valor unitario.
+          > Límite del Precio Unitario (Si lo que vendes supera los
+          $385.000,00.- no podrías ser Monotributista). Por ejemplo, si vendés
+          computadoras difícilmente puedas ser monotributista, ya que cualquier
+          computadora superaría ese valor unitario.
         </span>
       </li>
     </ul>
   </p>
 
-   
   <MonotributoVerMas />
-  <div class="flex justify-center my-6">
+  <!--<div class="flex justify-center my-2">
     <a
-      type="button"
+     
       href={message.href}
       target="_blank"
-      class="flex items-center bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded"
-    >
-      <Whatsapp class="fa fa-whatsapp whatsapp-icon" />
+      class="  flex  bg-blue-500 hover:bg-blue-700 text-white  font-bold py-2 px-4 rounded leading-relaxed"
+      > 
       {message.name}
     </a>
-  </div>
+  </div>-->
 </div>
-
-
- 

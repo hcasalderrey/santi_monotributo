@@ -1,112 +1,165 @@
 ---
-import Header from '../components/pages/Header.Responsive.astro';
-import Footer from '../components/pages/Footer.astro'; 
-import Whatsapp from '../components/icons/Whatsapp.astro';
+import Header from "../components/pages/Header.Responsive.astro";
+import Footer from "../components/pages/Footer.astro";
+import Whatsapp from "../components/icons/Whatsapp.astro";
 
-import '@fontsource-variable/encode-sans';
-import { ViewTransitions } from 'astro:transitions';
+import "@fontsource-variable/encode-sans";
+
+
+import Instagram from "../components/icons/Instagram.astro";
+import { ViewTransitions } from "astro:transitions"; 
 
 interface Props {
-	title: string;
-    description: string
+  title: string;
+  description: string;
 }
-const numero_whatsapp = import.meta.env.PUBLIC_NUMERO_WHATSAPP
+const numero_whatsapp = import.meta.env.PUBLIC_NUMERO_WHATSAPP;
 
-const message = 
-  {
-    name: "",
-    href:  `${numero_whatsapp}?text=Hola,%20necesito%20contactarlos%20para%20obtener%20información...`,
-  };
+const message = {
+  name: "",
+  href: `${numero_whatsapp}?text=Hola,%20necesito%20contactarlos%20para%20obtener%20información...`,
+};
 
 const { title, description } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content={description} />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@monotributo.net" />
+    <meta name="twitter:creator" content="@monotributo.net" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="/logo.jpg" />
 
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@monotributo.net" />
-        <meta name="twitter:creator" content="@monotributo.net" />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content="/logo.jpg" />
+    <meta name="og:image" content="/logo.jpg" />
+    <meta name="og:title" content={title} />
+    <meta name="og:description" content={description} />
+    <meta name="og:url" content="https://monotributo.net" />
+    <meta name="og:site_name" content="monotributo.net" />
+    <meta name="og:type" content="website" />
+    <meta name="og:locale" content="es_AR" />
+
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
     
-        <meta name="og:image" content="/logo.jpg" />
-        <meta name="og:title" content={title} />
-        <meta name="og:description" content={description} />
-        <meta name="og:url" content="https://monotributo.net" />
-        <meta name="og:site_name" content="monotributo.net" />
-        <meta name="og:type" content="website" />
-        <meta name="og:locale" content="es_AR" />
-    
-        <meta name="robots" content="index, follow" />
-        <meta name="googlebot" content="index, follow" />
-        <meta name="view-transitions" content="same-origin" />
-	 
-		<title>{title}</title>
+    <link rel="preload" href="./images/monotributonet.webm" as="video" />
+    <link rel="preload" href="./images/responsableinscripto.webm" as="video" />
+    <link rel="preload" href="./images/monotributo.webm" as="video" />
+ 
 
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
-        <ViewTransitions />
-	</head>
+    <title>{title}</title>
+    <!--<link rel="stylesheet" href="/ccs/tailwind.css" />-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
    
-    <body class="relative text-black   ">
 
-        <div class="absolute inset-0 -z-10  bottom-0 left-0 right-0 top-0 
-        md:bg-[radial-gradient(circle_500px_at_90%_200px,#79b2f8,transparent)]
-        bg-[radial-gradient(circle_250px_at_90%_200px,#79b2f8,transparent)]
-        
-        "></div>
-        <Header />
-        <main id="main-content" class="container mx-auto">
-          <slot />
-        </main>
-        <Footer />
-        <a href={message.href} class="whatsapp" target="_blank">  <Whatsapp class="fa fa-whatsapp whatsapp-icon "/>   </a>
-	</body>
-</html>
-<style is:global>
-	:root {
-        color-scheme: light;
-        --entry-animation: -20px;
-        --cover-animation: 20px;
+<ViewTransitions />
+  </head>
+
+  <body class="relative text-black ">
+    <div
+      class="absolute inset-0 -z-10 bottom-0 left-0 right-0 top-0
+        md:bg-[radial-gradient(circle_500px_at_90%_200px,#3f6b9c,transparent)]
+        bg-[radial-gradient(circle_250px_at_90%_200px,#3f6b9c,transparent)]"
+    >
+    </div>
+    <Header />
+    <main id="main-content" class="container mx-auto">
+      <slot />
+    </main>
+    <Footer />
+    <a href={message.href} class="whatsapp" target="_blank">
+      <Whatsapp class="fa fa-whatsapp whatsapp-icon" />
+    </a>
+    <a
+      href="https://www.instagram.com/monotributo.netok"
+      class="instagram"
+      target="_blank"
+    >
+      <Instagram class="fa fa-instagram instagram-icon" />
+    </a>
+  </body><style is:global>
+
+    @font-face {
+        font-family: 'gotham_medium';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(/fonts/gotham_medium.woff2) format('woff2');
+    }
+    @font-face {
+        font-family: 'gotham_bold';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(/fonts/gotham-bold.woff2) format('woff2');
+    }
+
+
+    :root {
+      color-scheme: light;
+      --entry-animation: -20px;
+      --cover-animation: 20px;
+    }
+
+    @media (min-width: 1400px) {
+      :root {
+        --entry-animation: -100px;
+        --cover-animation: 100px;
       }
-
-      @media (min-width: 1400px) {
-        :root {
-          --entry-animation: -100px;
-          --cover-animation: 100px;
-        }
-      }
-	html {
-		font-family:  'Encode Sans Variable' , system-ui, sans-serif;
-		background: #efefef;
-		 
-	}
-
+    }
+    html {
+      font-family: "gotham_medium", sans-serif;
+      font-weight: 300;
+      background: #efefef;
+    }
+    .banner-text {
+        font-family: "gotham_bold", sans-serif;
+        font-weight: 300;
+    }
     .whatsapp {
-  position:fixed;
-  width:60px;
-  height:60px;
-  bottom:40px;
-  right:40px;
-  background-color:#25d366;
-  color:#FFF;
-  border-radius:50px;
-  text-align:center;
-  font-size:30px;
-  z-index:100;
-}
+      position: fixed;
+      width: 40px;
+      height: 40px;
+      bottom: 40px;
+      right: 40px;
+      background-color: #25d366;
+      color: #fff;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 10px;
+      z-index: 100;
+    }
+    .instagram {
+      position: fixed;
+      width: 40px;
+      height: 40px;
+      bottom: 85px;
+      right: 40px;
+      background: linear-gradient(115deg, #f9ce34, #ee2a7b, #6228d7);
+      color: #fff;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 10px;
+      z-index: 100;
+    }
 
-.whatsapp-icon {
-  margin-top:8px;
-}
-	 
-</style>
+    .whatsapp-icon {
+      margin-top: 1px;
+      padding: 5%;
+    }
+    .instagram-icon {
+      margin-top: 1px;
+      padding: 5%;
+    }
+  </style>
+</html>
