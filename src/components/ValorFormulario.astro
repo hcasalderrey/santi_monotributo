@@ -6,14 +6,14 @@ const { formulario } = Astro.props;
   ></span>
 </div>
 
-<script>
+<script >
   let tramite = "monotributo";
   const formatter = new Intl.NumberFormat("es-AR", {
     style: "decimal",
     minimumFractionDigits: 0,
     maximumFractionDigits: 0,
   });
-  var input = document.getElementById("valor") as HTMLElement;
+  var input = document.getElementById("valor") as HTMLElement ;
 
   const datos = await fetch("../backend/data/valor.json").then((response) =>
     response.json()

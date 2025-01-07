@@ -9,6 +9,8 @@ import Faq from "../components/Faq.astro";
 import Cards from "../components/Cards.astro";
 import VideoMonotributo from "../components/VideoMonotributo.astro";
 import Prices from "../components/prices.astro";
+import QueOfrecemos from "../components/QueOfrecemos.astro";
+import ComoTrabaja from "../components/ComoTrabaja.astro";
 ---
 
 <Layout
@@ -16,7 +18,7 @@ import Prices from "../components/prices.astro";
   description="MONOTRIBUTO.NET, es una página de trámites y asesoramiento impositivo, en la cual vas a poder realizarlos de manera segura."
 >
 <main class="px-4 min-h-[calc(100vh_-_120px)]">
-    <SectionContainer class="pt-16 -mb-10 md:pt-36 sm:-mb-20">
+    <SectionContainer class="pt-16 -mb-10 md:pt-36  sm:-mb-20">
       <slot>
         <Carousel />
       </slot>
@@ -30,18 +32,22 @@ import Prices from "../components/prices.astro";
 
     <div class="md:mt-4 lg:mt-10  -mt-8"  >
 
-        <VideoMonotributo  video = "./images/monotributonet" imagen="./images/trailer.png"/>
+        <VideoMonotributo  video = "./images/1monotributonet" imagen="./images/trailer.png"/>
     </div>
     <div
     class="absolute inset-0 -z-10 bottom-0 left-0 right-0 top-1/2 bg-[radial-gradient(circle_170px_at_0%_200px,#3f6b9c,transparent)]"
   >
   </div>
     <Cards   />
+    <QueOfrecemos />
+    <ComoTrabaja />
+
+    <Prices />
 
     <Faq />
    
   
-    <Prices />
+
 
     <AboutMe />
 

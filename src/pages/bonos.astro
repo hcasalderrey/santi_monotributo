@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import Banner from "../components/icons/Banner.astro"; 
 import ExplicacionBONO from "../components/ExplicacionBONO.astro";
+import Prices from "../components/prices.astro";
 ---
 
 <Layout
@@ -12,9 +13,11 @@ import ExplicacionBONO from "../components/ExplicacionBONO.astro";
   <main class="px-4 min-h-[calc(100vh_-_90px)]">
     <SectionContainer class="py-16 md:py-36">
       <slot>
-        <Banner title="Bonos mensuales" />
+        <Banner title="planes mensuales" />
 
-        <ExplicacionBONO />
+        <!--<ExplicacionBONO />-->
+
+        <Prices />
       </slot>
     </SectionContainer>
     <div

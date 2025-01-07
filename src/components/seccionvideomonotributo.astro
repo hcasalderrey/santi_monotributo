@@ -1,0 +1,44 @@
+---
+import VideoMonotributo from "../components/VideoMonotributo.astro";
+const message = {
+  name: "Continuar con el formulario",
+  href: '../formularios/monotributo.php',
+};
+---
+
+<div class="flex justify-center my-4">
+    
+    <a
+     
+      href={message.href}
+      target="_blank"
+      class="  flex  bg-blue-500 hover:bg-blue-700 text-white  font-bold py-2 px-4 rounded leading-relaxed"
+      >
+     
+      {message.name}
+    </a>
+  </div>
+
+  <div class="flex justify-center my-2">
+    <div
+      class="w-full justify-center align-middle block max-w-full p-6 bg-white border border-gray-200
+      rounded-lg shadow hover:bg-gray-100 space-x-2"
+    >
+      <p class="font-semibold text-center text-gray-700">
+        ¡Hola! Estás por iniciar el trámite de “<span class="font-bold">Alta en el Monotributo</span>”  . Vamos a solicitarte datos sensibles como tu DNI y Clave
+        Fiscal. Si no estás seguro, podés contactarte primero con uno de
+        nuestros contadores por WhatsApp, o dejarnos tu celular para que
+        te llamemos nosotros directamente.
+      </p>
+      <p class="font-semibold text-center text-gray-700 mt-2">
+          ¡No lo dudes, estamos para ayudarte!
+      </p>
+       
+      <p class="font-bold mt-2 text-center text-gray-700">
+          Monotributo.net
+      </p>
+    </div>
+  </div>
+
+
+  <VideoMonotributo  video = "../images/monotributo" imagen="../images/trailer2.png"/>

@@ -95,7 +95,7 @@ export const Formulario = () => {
         <input
           type="text"
           id="cname" 
-          className="px-2 py-2 border w-full outline-none rounded-xl"
+          className="px-2 py-2  focus:ring-2 w-full outline-none rounded-xl"
           name="from_name"
           placeholder="Nombre" 
           onInput={handleInputNameChange}
@@ -114,7 +114,7 @@ export const Formulario = () => {
           type="text"
           id="clastname"
           required
-          className="px-2 py-2 border w-full outline-none rounded-xl"
+          className="px-2 py-2  focus:ring-2 w-full outline-none rounded-xl"
           name="from_lastname"
           placeholder="Apellido"   
           onInput={handleInputLastNameChange}
@@ -131,7 +131,7 @@ export const Formulario = () => {
         <input 
           type="email"
           id="cmail"
-          className="px-2 py-2 border w-full outline-none rounded-xl"
+          className="px-2 py-2  focus:ring-2 w-full outline-none rounded-xl"
           name="from_email"
           placeholder="Correo electrónico"
           onInput={handleInputMailChange}
@@ -149,7 +149,7 @@ export const Formulario = () => {
         required
           type="text"
           id="cphone"
-          className="px-2 py-2 border w-full outline-none rounded-xl"
+          className="px-2 py-2  focus:ring-2 w-full outline-none rounded-xl"
           name="from_phone"
           placeholder="Teléfono"
           onInput={handleInputPhoneChange}
@@ -163,7 +163,7 @@ export const Formulario = () => {
         </label>
         <textarea
             required
-          className="px-2 py-2 border rounded-xl w-full outline-none"
+          className="px-2 py-2  focus:ring-2 rounded-xl w-full outline-none"
           placeholder="Escriba su mensaje"
           name="message"
         ></textarea>
@@ -172,8 +172,8 @@ export const Formulario = () => {
       <button
         type="submit"
         value="Send"
-        className="mb-6 inline-block w-full rounded bg-blue-500 px-6 py-2.5 font-medium uppercase leading-relaxed
-         text-white hover:shadow-md hover:bg-blue-700"
+        className="mb-6 inline-block w-full rounded-3xl   px-6 py-2.5 font-medium uppercase leading-relaxed
+         text-white hover:shadow-md bg-accentligth hover:bg-accent "
       >
         enviar
       </button>
