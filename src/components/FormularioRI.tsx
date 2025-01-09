@@ -2,7 +2,7 @@
 import emailjs from "@emailjs/browser";
 
 const SERVICE_ID='service_15fhl87'
-const TEMPLATE_ID='template_bntagac'
+const TEMPLATE_ID='template_bp4btym'
 const PUBLIC_KEY='xIFzN1G0WWC1g37GV'
 
 
@@ -97,6 +97,17 @@ export const FormularioRI = () => {
       onSubmit={sendEmail}
       className="mb-12 w-full shrink-0 grow-0 basis-auto md:px-3 lg:mb-0 lg:w-2/5 lg:px-6"
     >
+        <input
+          type="text"
+          id="cformulario" 
+          className="px-2 py-2  focus:ring-2 w-full outline-none rounded-xl text-center"
+          name="from_formulario"
+          placeholder="Responsable Inscripto"
+          value={"Responsable Inscripto"}  //
+       
+          onInput={handleInputNameChange}
+        />
+
       <div className="mb-3 w-full">
         <label   className="block font-medium mb-[2px] text-gray-600">
           Nombre (*)
@@ -146,7 +157,7 @@ export const FormularioRI = () => {
           type="text"
           id="cdni"
           className="px-2 py-2  focus:ring-2 w-full outline-none rounded-xl"
-          name="from_DNI"
+          name="from_dni"
           placeholder="DNI"
           onInput={handleInputDNIChange}
         //  pattern="\d{1,5}" maxLength={10}
