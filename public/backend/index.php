@@ -47,22 +47,15 @@
       data-astro-transition-persist="astro-bjtkwc3c-1"
     >
       <div class="container mx-auto">
-        <nav
-          class="relative px-4 py-4 flex justify-between items-center bg-white"
-        >
-          <a
-            class="text-2xl font-bold leading-none items-center inline-flex"
-            href="/"
-          >
-            <img
-              src="./images/logo.webp"
-              class="h-12"
-              style="filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.8))"
-              alt=""
-            />
-            <span class="text-gray-900 pl-5 uppercase">Monotributo</span>
-            <span class="text-blue-600">.net</span>
-          </a>
+      <nav class="relative px-6 py-6 flex justify-between items-center
+     bg-[#3f6b9c]  rounded-3xl rounded-t-none shadow-2xl shadow-gray-100 drop-shadow-xl">
+      <a class="text-base  md:text-xl   lg:text-2xl  font-bold leading-none items-center inline-flex" href="/">
+        <img src="./images/logo.avif" class="h-20" style="filter: drop-shadow(0 0 0.5px rgba(0,0,0,0.8));" alt="">
+        <!--<span class="text-gray-900 pl-5 uppercase">Monotributo</span>
+        <span class="text-accent">.net</span>-->
+        
+
+      </a>
            
         </nav>
         
